@@ -12,7 +12,6 @@ export default defineConfig([
     entry: {
       index: "src/index.tsx",
       utils: "src/utils/index.ts",
-      icons: "src/icons/index.tsx"
     },
     external: [
       "react",

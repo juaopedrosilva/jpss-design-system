@@ -2,7 +2,6 @@ import * as React from "react";
 
 import { Slot } from "@radix-ui/react-slot";
 import { type ButtonColorType, type ButtonSizeType, type ButtonVariantType } from "~/components";
-import { LoadingIcon } from "~/icons";
 
 import { buttonCva, iconContainerCva, iconCva } from "./Button.styles";
 
@@ -108,12 +107,12 @@ function ButtonContent({
   ...props
 }: Partial<ButtonProps>) {
   const isStartLoading = loading && loadingPosition === "start";
-  const StartIcon = isStartLoading ? <LoadingIcon aria-label="Loading" /> : startIcon || null;
+  const StartIcon = isStartLoading ? <span>loading</span> : startIcon || null;
   const startIconStyles = iconCva({ size, loading: isStartLoading });
   const startIconContainerStyles = iconContainerCva({ size, site: "left" });
 
   const isEndLoading = loading && loadingPosition === "end";
-  const EndIcon = isEndLoading ? <LoadingIcon aria-label="Loading" /> : endIcon || null;
+  const EndIcon = isEndLoading ? <span>loading</span> : endIcon || null;
   const endIconStyles = iconCva({ size, loading: isEndLoading });
   const endIconContainerStyles = iconContainerCva({ size, site: "right" });
 

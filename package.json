@@ -1,6 +1,6 @@
 {
   "name": "@jp-poc/design-system",
-  "version": "2.0.2",
+  "version": "2.0.4",
   "description": "Szum-Tech design system with tailwindcss support",
   "keywords": [
     "szum-tech",
@@ -36,16 +36,6 @@
       "require": {
         "types": "./dist/index.d.cts",
         "require": "./dist/index.cjs"
-      }
-    },
-    "./icons": {
-      "import": {
-        "types": "./dist/icons.d.ts",
-        "import": "./dist/icons.js"
-      },
-      "require": {
-        "types": "./dist/icons.d.cts",
-        "require": "./dist/icons.cjs"
       }
     },
     "./utils": {
@@ -87,6 +77,7 @@
     "type-check": "tsc --noEmit"
   },
   "dependencies": {
+    "@radix-ui/react-slot": "^1.1.2",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "radix-ui": "^1.1.3",
